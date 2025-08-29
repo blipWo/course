@@ -1,0 +1,676 @@
+/* css berfungsi untuk membuat tampilan web dari file html lebih menarik dengan style dari css*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, 
+body { 
+    margin: 0px; 
+    padding: 0px; 
+    font-size: 16px; 
+    font-family: "Nunito", sans-serif; 
+    scroll-behavior: smooth;
+}
+
+.wrapper{ 
+    width: 1024px;
+    margin: auto;
+    padding: 20px 0px 20px 0px;
+}
+
+/* menu */
+
+nav {
+    background-color: #27374D;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav > .wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+.menu {
+    width: 50%;
+}
+
+.menu > ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    justify-content: space-between;
+}
+
+.menu > ul > li > a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.menu > ul > li > a:hover {
+    color: #9DB2BF;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.logo > img {
+    height: 45px;
+    width: auto;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    border-radius: 8px;
+}
+
+.logo > img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Tambahkan animasi untuk logo saat halaman dimuat */
+@keyframes logoEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+}
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo > img {
+    animation: logoEntrance 0.5s ease-out;
+}
+
+/* hero / jumbotron */
+
+header {
+    background: url('../asset/template-website-portofolio-main/template-website-portofolio-main/images/bg-header.webp');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    font-family: "Kanit", sans-serif;
+    letter-spacing: 5px;
+    text-shadow: 0 0 4px #000;
+    z-index: 1; /* menambahkan z-index */
+}
+
+.header-opacity {
+    background: linear-gradient(45deg, rgba(39, 55, 77, 0.9), rgba(82, 109, 130, 0.8));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.header-jumbotron {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 3; /* menambahkan z-index untuk memastikan konten di atas opacity layer */
+}
+
+.header-jumbotron > h4 {
+    color: #9DB2BF;
+    font-size: 2rem;
+    margin: 0px;
+    padding: 0px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-jumbotron > h5 {
+    color: #DDE6ED;
+    margin: 0px;
+    padding: 5px;
+    font-size: 3.5rem;
+    line-height: 4rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(45deg, #DDE6ED, #9DB2BF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.header-jumbotron > p {
+    padding: 5px;
+    margin: 0px 5px 20px 5px;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    text-shadow: none;
+}
+
+.button {
+    background-color: #526D82;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: "Kanit", sans-serif;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.button:hover {
+    background-color: #27374D;
+    border-color: #9DB2BF;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-xl {
+    font-size: 1.4rem;
+    padding: 20px;
+    background: linear-gradient(45deg, #27374D, #526D82);
+    border: none;
+}
+
+.button-xl:hover {
+    background: linear-gradient(45deg, #526D82, #27374D);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Tambahan class untuk variasi text */
+.text-primary {
+    color: #DDE6ED;
+}
+
+.text-secondary {
+    color: #526D82;
+}
+
+.text-accent {
+    color: #9DB2BF;
+}
+
+/* Palet warna yang diperbarui */
+:root {
+    --primary-dark: #27374D;
+    --primary-medium: #526D82;
+    --primary-light: #9DB2BF;
+    --accent: #DDE6ED;
+}
+
+/* 
+* statistic
+*/
+#statistik { 
+    background-color: #526D82;
+    color: #fff;
+    font-family: "Kanit", sans-serif;
+}
+
+#statistik > .wrapper {
+    padding: 50px;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+#statistik > .wrapper > div {
+    text-align: center;
+}
+
+#statistik > .wrapper > div > p {
+    font-size: 3.5rem;
+    padding: 0px;
+    margin: 0px;
+}
+
+#statistik > .wrapper > div > p > i {
+    margin-right: 10px;
+    font-size: 3.5rem;
+}
+
+#statistik > .wrapper > div > small {
+    font-size: 1.5rem;
+}
+
+/* 
+* my experience
+*/
+#my-experience {
+    background-color: #27374D;
+    color: #DDE6ED;
+}
+
+#my-experience > .wrapper {
+    padding: 50px 0px 50px 0px;
+}
+
+#my-experience > .wrapper > h4 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Kanit", sans-serif;
+}
+
+#my-experience > .wrapper > h4 > span {
+    color: #9DB2BF;
+}
+
+#my-experience > .wrapper > p {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0px;
+    padding: 0px;
+    color: #DDE6ED;
+    margin-bottom: 50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 50px;
+}
+
+.grid > .item {
+    border: 1px solid #666;
+    background-color: #526D82;
+    border-radius: 5px;
+    position: relative;
+}
+
+.grid > .item > img {
+    width: 15%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.grid > .item > .item-detail {
+    padding: 30px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 70%;
+}
+
+.grid > .item > .item-detail > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.grid > .item > .item-detail > div > small {
+    color: #ccc;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.grid > .item > .item-detail > div > a {
+    font-size: 1rem;
+    color: #9DB2BF;
+}
+
+/* 
+* tentang saya
+*/
+#tentang-saya {
+    background-color: #F0F5F9;
+    color: #000;
+}
+
+#tentang-saya > .wrapper {
+    padding: 50px 0px 50px 0px;
+}
+
+#tentang-saya > .wrapper > h4 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Kanit", sans-serif;
+}
+
+#tentang-saya > .wrapper > p {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0px;
+    padding: 0px;
+    color: #000;
+    margin-bottom: 50px;
+}
+
+#tentang-saya > .wrapper > div {
+    display: flex;
+    width: 70%
+    margin auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tentang-saya > .wrapper > div > .foto {
+    width: 30%;
+}
+
+#tentang-saya > .wrapper > div > .foto > img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+#tentang-saya > .wrapper > div > .desc {
+    width: 70%;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#tentang-saya > .wrapper > div > .desc > p {
+    margin: 0px 0px 10px 0px;
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+}
+
+/* Sosial Media */
+.sosial {
+    margin-top: 20px;
+}
+
+.sosial a {
+    color: #27374D;
+    font-size: 2rem;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.sosial a:hover {
+    color: #526D82;
+}
+
+/*
+* private course
+*/
+
+#Private-course {
+    background-color: #27374D;
+    color: #fff;
+}
+
+#Private-course > .wrapper {
+    padding: 50px 0px 50px 0px;
+}
+
+#Private-course > .wrapper > h4 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Kanit", sans-serif;
+}
+
+#Private-course > .wrapper > h4 > span {
+    color: #9DB2BF;
+}
+
+#Private-course > .wrapper > p {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0px;
+    padding: 0px;
+    color: #DDE6ED;
+    margin-bottom: 50px;
+}
+
+#private-course > .wrapper > .grid > .item {
+    margin: 0px;
+    padding: 0px;
+}
+
+#private-course > .wrapper > .grid > .item > .item-detail {
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.4rem;
+    width: 100%;
+}
+
+#private-course > .wrapper > .grid > .item > .item-detail > img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#Private-course .grid {
+    display: grid;
+    gap: 30px;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+#Private-course .item {
+    background: #526D82;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#Private-course .item-detail {
+    padding: 15px;
+}
+
+#Private-course .item-detail img {
+    width: 100%;
+    height: 200px; /* tetapkan tinggi yang konsisten */
+    object-fit: cover; /* pastikan gambar menutupi area dengan baik */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+#Private-course .item-detail img:hover {
+    transform: scale(1.03);
+}
+
+#Private-course .item-detail div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+#Private-course .item-detail small {
+    color: #DDE6ED;
+    font-size: 0.9rem;
+}
+
+#Private-course .item-detail .button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+#private-course > .wrapper > .grid > .item > .item-detail > div {
+    padding: 10px 20px 10px 20px;
+}
+
+/* 
+* copyright 
+*/
+footer {
+    background-color: #000;
+    color: #DDE6ED;
+    text-align: center;
+}
+
+footer > .wrapper {
+    padding: 30px 0px 30px 0px;
+}
+
+/*
+* hamburger menu
+*/
+button.hamburger-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+button.hamburger-menu > i {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+button.hamburger-menu > i.icon-close {
+display: none;
+}
+
+/*
+* 1024, 900, 768, 600, 480
+*/
+
+@media only screen and (max-width: 1024px) {
+    .wrapper {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+#statistik > .wrapper > div > p {
+    font-size: 2.5rem;
+    padding: 0px;
+    margin: 0px;
+}
+
+#statistik > .wrapper > div > p > i {
+    font-size: 2.5rem;
+}
+
+#statistik > .wrapper > div > small {
+    font-size: 1rem;
+}
+
+.grid {
+    grid-template-columns: 45% 45%;
+}
+
+.item > img {
+width: 8%;
+}
+}
+
+@media only screen and (max-width: 768px) {
+.menu {
+    width: 60%;
+}
+.header-jumbotron > h4 {
+    font-size: 1.5rem;
+}
+.header-jumbotron > h5 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+}
+.header-jumbotron > p {
+    font-size: 0.8rem;
+}
+.button {
+    padding: 5px;
+}
+.button-xl {
+    font-size: 1.2rem;
+    padding: 10px;
+}
+#statistik > .wrapper > div > p {
+    font-size: 1.5rem;
+    margin: 0px;
+}
+#statistik > .wrapper > div > p > i {
+    font-size: 2.5rem;
+}
+}
+
+@media only screen and (max-width: 600px) {
+.grid {
+    grid-template-columns: 100%; 
+}
+#statistik > .wrapper {
+    padding: 10px;
+    flex-direction: column;
+}
+
+#statistik > .wrapper > div {
+    display: flex;
+}
+
+#statistik > .wrapper > div > small {
+    font-size: 1.5rem;
+    padding-left: 10px;
+}
+
+#tentang-saya > .wrapper > div {
+    width: 100%;
+    flex-direction: column;
+}
+
+#tentang-saya > .wrapper > div > .foto {
+    width: 50%;
+}
+
+#tentang-saya > .wrapper > div > .foto > img {
+    width: 100%;
+}
+
+#tentang-saya > .wrapper > div > .foto > .desc {
+    width: 70%;
+    padding: 20px;
+    margin: 10px;
+}
+
+#tentang-saya > .wrapper > div > .desc > .sosial {
+    margin: auto;
+}
+
+button.hamburger-menu {
+display: inline;
+}
+
+.menu {
+    display: none;
+}
+
+.tampil {
+    display: inline;
+}
+
+.tampil > ul {
+    flex-direction: column;
+    background-color: #526D82;
+    width: 100%;
+    position: fixed;
+    top: 85px;
+    left: 0;
+}
+
+.tampil > ul > li {
+padding: 10px 20px 10px 20px;
+}
+}
